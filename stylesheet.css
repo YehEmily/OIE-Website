@@ -1,0 +1,206 @@
+html {
+    background: url('https://lh4.googleusercontent.com/RTGHZbSURlbHlaWxUsEjxB7XU7jsRiSP9eCPyQeUBP6COPinaT9YEeANxP_lBFjHidTrG84EKdp0-Iw=w2560-h1299-rw') no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+h1, h2, h3, p, a, button, table, li {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+li {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: darkgray;
+    transition: 0.7s;
+}
+
+a:hover, a:active {
+    color: rgb(0, 204, 255);
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: none;
+    width: 70%;
+    height: 100%;
+}
+
+th {
+    padding: 1%;
+    font-size: 1.3em;
+    width: 20%;
+}
+
+tr {
+    padding: 0;
+    margin: 0;
+}
+
+td {
+    width: 50%;
+    padding: 3%;
+    vertical-align: top;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+div.homepage {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ms-transform: translate(-50%, -50%);
+    border: 0.1em solid white;
+    padding: 3%;
+}
+
+div.warn-box {
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 0.1em solid white;
+    padding: 1%;
+}
+
+div.fill-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div.content {
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+div.container {
+    width: 30%;
+    margin: auto;
+}
+
+div.box-container {
+    padding-bottom: 3%;
+
+}
+
+div.left-floating-box {
+    width: 30%;
+    float: left;
+    margin-left: 18%;
+    margin-right: 2%;
+}
+
+div.right-floating-box {
+    width: 30%;
+    float: right;
+    margin-left: 2%;
+    margin-right: 18%;
+}
+
+button {
+    background: none;
+    border: 0.1em solid white;
+    border-radius: 2em;
+    padding: 2%;
+    font-size: 1em;
+    color: white;
+    transition: 0.5s;
+    outline: none;  
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.white-font {
+    color: white;
+}
+
+.white-background {
+    background-color: rgb(235, 235, 235);
+}
+
+.footer {
+    padding: 1%;
+    padding-left: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top: 0.1em solid white;
+}
+
+#about, #policies, #calendar, #handouts {
+    padding: 3%;
+}
+
+#menu {
+    position:fixed;
+    top: 0em;
+    width: 100%;
+    background-color: white;
+    color: black;
+    z-index: 9999;
+    display: none;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: 0.08em solid silver;
+}
+
+table.calendar {
+    width: 100%;
+}
+
+td.calendar {
+    width: 20%;
+    position: relative;
+}
+
+td.calendar:after{
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+td .calendar-content {
+    padding: 7%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+td.calendar:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
