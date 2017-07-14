@@ -1,5 +1,6 @@
+/* Whole Page Formatting */
 html {
-    background: url('https://lh4.googleusercontent.com/RTGHZbSURlbHlaWxUsEjxB7XU7jsRiSP9eCPyQeUBP6COPinaT9YEeANxP_lBFjHidTrG84EKdp0-Iw=w2560-h1299-rw') no-repeat fixed;
+    background: url('http://i1383.photobucket.com/albums/ah287/YehEmily/Olin_College03_zpsynagujcd.png') no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,6 +15,7 @@ body {
     height: 100%;
 }
 
+/* Font and Text Formatting */
 h1, h2, h3, p, a, button, table, li {
     font-family: 'Roboto', sans-serif;
 }
@@ -30,8 +32,8 @@ h3 {
     font-size: 1em;
 }
 
-li {
-    text-align: justify;
+p {
+    font-size: 0.9em;
 }
 
 a {
@@ -44,6 +46,11 @@ a:hover, a:active {
     color: rgb(0, 204, 255);
 }
 
+li {
+    text-align: justify;
+}
+
+/* Table Formatting */
 table {
     border-collapse: collapse;
     table-layout: fixed;
@@ -69,10 +76,35 @@ td {
     vertical-align: top;
 }
 
-p {
-    font-size: 0.9em;
+table.calendar {
+    width: 100%;
 }
 
+td.calendar {
+    width: 20%;
+    position: relative;
+}
+
+td.calendar:after{
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+td .calendar-content {
+    padding: 7%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+td.calendar:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Various Div Formatting */
 div.homepage {
     background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
@@ -109,7 +141,6 @@ div.container {
 
 div.box-container {
     padding-bottom: 3%;
-
 }
 
 div.left-floating-box {
@@ -126,6 +157,14 @@ div.right-floating-box {
     margin-right: 18%;
 }
 
+div.footer {
+    padding: 1%;
+    padding-left: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top: 0.1em solid white;
+}
+
+/* Button Formatting */
 button {
     background: none;
     border: 0.1em solid white;
@@ -143,21 +182,138 @@ button:hover {
     cursor: pointer;
 }
 
-.white-font {
+button.close {
+    background: none;
+    border: 0.05em solid black;
+    border-radius: 1em;
+    color: black;
+    font-size: 1em;
+    padding: 0.2em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    margin-top: 2em;
+    margin-right: 1em;
+}
+
+button.close:hover {
+    background-color: black;
     color: white;
+    cursor: pointer;
 }
 
-.white-background {
-    background-color: rgb(235, 235, 235);
+/* Modal Formatting */
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
-.footer {
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    border-radius: 3em 3em 0 0;
+    margin: auto;
+    padding: 0;
+    border: none;
+    width: 80%;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.2), 0 0.2em 0.2em 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Animations */
+@-webkit-keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    } to {
+        top:0;
+        opacity:1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -9em;
+        opacity: 0
+    } to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 2.5em;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Header */
+.modal-header-regular-class {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    background-color: rgb(200, 200, 200);
+    color: black;
+    border-radius: 3em 3em 0 0;
+}
+
+.modal-header-extended-class {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    background-color: rgb(160, 160, 160);
+    color: black;
+    border-radius: 3em 3em 0 0;
+}
+
+.modal-header-affiliated-activity {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    background-color: rgb(255, 120, 120);
+    color: black;
+    border-radius: 3em 3em 0 0;
+}
+
+/* Body */
+.modal-body {
     padding: 1%;
-    padding-left: 10%;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-top: 0.1em solid white;
 }
 
+/* Footer */
+.modal-footer {
+    padding: 1%;
+    background-color: white;
+    color: black;
+}
+
+/* Section Formatting */
 #about, #policies, #calendar, #handouts {
     padding: 3%;
 }
@@ -176,31 +332,12 @@ button:hover {
     border-bottom: 0.08em solid silver;
 }
 
-table.calendar {
-    width: 100%;
+/* All-Purpose Formatting */
+.white-font {
+    color: white;
 }
 
-td.calendar {
-    width: 20%;
-    position: relative;
-}
-
-td.calendar:after{
-    content: '';
-    display: block;
-    margin-top: 100%;
-}
-
-td .calendar-content {
-    padding: 7%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-td.calendar:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+.white-background {
+    background-color: rgb(235, 235, 235);
 }
 
